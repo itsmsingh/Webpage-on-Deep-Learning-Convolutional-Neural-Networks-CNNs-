@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Learning: Convolutional Neural Networks (CNNs)</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Deep Learning: Convolutional Neural Networks (CNNs)</h1>
+    <p>Explore the power of CNNs in image analysis and computer vision.</p>
+  </header>
+
+  <!-- Section 1: Definitions and Descriptions -->
+  <section>
+    <h2>What are Convolutional Neural Networks (CNNs)?</h2>
+    <p>A Convolutional Neural Network (CNN) is a deep learning model particularly effective for analyzing visual imagery. Inspired by the human visual cortex, CNNs use a hierarchical pattern recognition method to automatically learn and represent features directly from image pixels.</p>
+    <p>CNNs excel in tasks such as image classification, object detection, and segmentation. They leverage convolutional layers to efficiently handle the spatial hierarchy in images, extracting low-level features like edges and textures in early layers, gradually learning more abstract features in deeper layers.</p>
+    <h3>Key Features:</h3>
+    <ul>
+      <li><strong>Convolutional Layers:</strong> Apply filters (kernels) to input images to extract relevant features.</li>
+      <li><strong>Pooling Layers:</strong> Reduce spatial dimensions, aiding computational efficiency and creating translation-invariant representations.</li>
+      <li><strong>Fully Connected Layers:</strong> Classify extracted features into output classes.</li>
+    </ul>
+  </section>
+
+  <!-- Section 2: Interactive Visualizations -->
+  <section>
+    <h2>Interactive Visualizations</h2>
+    <div class="visualization">
+      <h3>1. Convolution Operation</h3>
+      <div id="convolutionPlot" style="width: 100%; height: 400px;"></div>
+      <input type="range" id="kernelSize" min="1" max="5" value="3" oninput="updateConvolutionPlot()">
+      <label for="kernelSize">Kernel Size: <span id="kernelSizeValue">3</span></label>
+    </div>
+    <div class="visualization">
+      <h3>2. Feature Map Visualization</h3>
+      <div id="featureMapPlot" style="width: 100%; height: 400px;"></div>
+      <input type="range" id="featureLevel" min="1" max="3" value="1" oninput="updateFeatureMapPlot()">
+      <label for="featureLevel">Feature Level: <span id="featureLevelValue">1</span></label>
+    </div>
+  </section>
+
+  <!-- Section 3: Real-World Applications -->
+  <section>
+    <h2>Real-World Applications of CNNs</h2>
+    <ul>
+      <li><strong>Autonomous Vehicles:</strong> Object detection, lane detection, and traffic sign recognition.</li>
+      <li><strong>Medical Image Analysis:</strong> Diagnosing diseases from X-rays, MRIs, and CT scans.</li>
+      <li><strong>Facial Recognition Systems:</strong> Security systems, smartphones, and surveillance.</li>
+      <li><strong>E-commerce & Retail:</strong> Visual search engines and product recommendations.</li>
+    </ul>
+  </section>
+
+  <!-- Section 4: Practice Quizzes -->
+  <section>
+    <h2>Test Your Knowledge</h2>
+    <div class="quiz">
+      <p><strong>Q1:</strong> What is the primary purpose of convolutional layers in CNNs?</p>
+      <button onclick="checkAnswer(1, 'a')">A) Extract features</button>
+      <button onclick="checkAnswer(1, 'b')">B) Reduce dimensions</button>
+      <button onclick="checkAnswer(1, 'c')">C) Classify images</button>
+      <div id="feedback1" class="feedback"></div>
+    </div>
+    <div class="quiz">
+      <p><strong>Q2:</strong> Which layer reduces the spatial dimensions of feature maps?</p>
+      <button onclick="checkAnswer(2, 'a')">A) Convolutional Layer</button>
+      <button onclick="checkAnswer(2, 'b')">B) Pooling Layer</button>
+      <button onclick="checkAnswer(2, 'c')">C) Fully Connected Layer</button>
+      <div id="feedback2" class="feedback"></div>
+    </div>
+    <div class="quiz">
+      <p><strong>Q3:</strong> Which application uses CNNs for diagnosing diseases?</p>
+      <button onclick="checkAnswer(3, 'a')">A) Autonomous Vehicles</button>
+      <button onclick="checkAnswer(3, 'b')">B) Medical Image Analysis</button>
+      <button onclick="checkAnswer(3, 'c')">C) Facial Recognition</button>
+      <div id="feedback3" class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- Section 5: Additional Resources -->
+  <section>
+    <h2>Additional Resources</h2>
+    <ul>
+      <li><a href="https://www.tensorflow.org/tutorials/images/cnn" target="_blank">TensorFlow CNN Tutorial</a></li>
+      <li><a href="https://cs231n.github.io/" target="_blank">Stanford CS231n: Convolutional Neural Networks for Visual Recognition</a></li>
+      <li><a href="https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html" target="_blank">PyTorch CNN Tutorial</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Deep Learning Education. All rights reserved.</p>
+  </footer>
+</body>
+</html>
